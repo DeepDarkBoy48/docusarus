@@ -1,0 +1,20 @@
+{
+  "id": "徐子",
+  "title": "徐子",
+  "description": "awdawdaw",
+  "source": "@site/docs/徐子.md",
+  "sourceDirName": ".",
+  "slug": "/徐子",
+  "permalink": "/docs/徐子",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/徐子.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Translate your site",
+    "permalink": "/docs/tutorial-extras/translate-your-site"
+  }
+}
