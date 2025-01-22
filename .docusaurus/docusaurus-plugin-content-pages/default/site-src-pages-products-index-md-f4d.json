@@ -1,0 +1,12 @@
+{
+  "type": "mdx",
+  "permalink": "/products/",
+  "source": "@site/src/pages/products/index.md",
+  "title": "产品列表",
+  "description": "- 产品 A",
+  "frontMatter": {
+    "title": "产品列表",
+    "sidebar_label": "产品"
+  },
+  "unlisted": false
+}

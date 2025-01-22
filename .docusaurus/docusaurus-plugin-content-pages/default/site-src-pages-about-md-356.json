@@ -1,0 +1,12 @@
+{
+  "type": "mdx",
+  "permalink": "/about",
+  "source": "@site/src/pages/about.md",
+  "title": "关于我们",
+  "description": "了解更多关于我们的信息",
+  "frontMatter": {
+    "title": "关于我们",
+    "description": "了解更多关于我们的信息"
+  },
+  "unlisted": false
+}

@@ -1,0 +1,295 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import React, { useState, useEffect, useRef } from "react";
+
+# Git 工作流
+
+:::tip MDX 特性演示
+MDX 是 Markdown 的扩展格式，它允许在文档中直接使用 React 组件。下面是一些 MDX 的特性演示：
+:::
+
+## MDX 示例
+
+### 1. 事件处理示例
+
+export const ButtonDemo = () => {
+  const [count, setCount] = useState(0);
+
+return (
+
+<div
+  style={{
+    padding: "20px",
+    border: "1px solid #eee",
+    borderRadius: "8px",
+    marginBottom: "20px",
+  }}
+>
+  <p>点击次数: {count}</p>
+  <button
+    onClick={() => setCount(count + 1)}
+    style={{
+      padding: "8px 16px",
+      backgroundColor: "#25c2a0",
+      color: "white",
+      border: "none",
+      borderRadius: "4px",
+      cursor: "pointer",
+    }}
+  >
+    点击我
+  </button>
+</div>
+); };
+
+<ButtonDemo />
+
+### 2. DOM 操作示例
+
+export const DomDemo = () => {
+  const inputRef = useRef(null);
+  const [text, setText] = useState('');
+
+const focusInput = () => {
+inputRef.current.focus();
+};
+
+return (
+
+<div
+  style={{
+    padding: "20px",
+    border: "1px solid #eee",
+    borderRadius: "8px",
+    marginBottom: "20px",
+  }}
+>
+  <input
+    ref={inputRef}
+    type="text"
+    value={text}
+    onChange={(e) => setText(e.target.value)}
+    style={{
+      padding: "8px",
+      marginRight: "10px",
+      borderRadius: "4px",
+      border: "1px solid #ddd",
+    }}
+    placeholder="输入一些文字"
+  />
+  <button
+    onClick={focusInput}
+    style={{
+      padding: "8px 16px",
+      backgroundColor: "#25c2a0",
+      color: "white",
+      border: "none",
+      borderRadius: "4px",
+      cursor: "pointer",
+    }}
+  >
+    聚焦输入框
+  </button>
+  <p>当前输入: {text}</p>
+</div>
+); };
+
+<DomDemo />
+
+### 3. 使用 React 组件
+
+这是一个使用 Docusaurus 内置标签组件的示例：
+
+<Tabs>
+  <TabItem value="apple" label="苹果" default>
+    这是关于苹果的内容
+  </TabItem>
+  <TabItem value="orange" label="橙子">
+    这是关于橙子的内容
+  </TabItem>
+  <TabItem value="banana" label="香蕉">
+    这是关于香蕉的内容
+  </TabItem>
+</Tabs>
+
+### 4. 使用提示框
+
+:::note 注意
+这是一个注意提示框
+:::
+
+:::tip 提示
+这是一个提示信息框
+:::
+
+:::warning 警告
+这是一个警告提示框
+:::
+
+:::danger 危险
+这是一个危险提示框
+:::
+
+### 5. 代码块与高亮
+
+```jsx title="示例组件"
+function ExampleComponent() {
+  return (
+    <div>
+      <h1>Hello MDX!</h1>
+      <p>这是一个 React 组件示例</p>
+    </div>
+  );
+}
+```
+
+本文将介绍几种常见的 Git 工作流模型，帮助你选择适合团队的开发模式。
+
+## Git Flow
+
+### 概述
+
+Git Flow 是一个非常成熟的分支管理模型，适合有计划发布周期的项目。
+
+### 主要分支
+
+- **master**：主分支，存储正式发布的版本
+- **develop**：开发分支，最新的开发代码
+
+### 支持分支
+
+- **feature**：新功能开发
+- **release**：版本发布准备
+- **hotfix**：生产环境紧急修复
+
+### 工作流程
+
+1. 从 develop 分支创建 feature 分支
+2. 在 feature 分支上开发新功能
+3. 完成后合并回 develop 分支
+4. 创建 release 分支准备发布
+5. 测试和修复 release 分支
+6. 合并 release 到 master 和 develop
+
+## GitHub Flow
+
+### 概述
+
+相比 Git Flow 更简单的工作流，适合持续部署的项目。
+
+### 核心原则
+
+1. master 分支始终可部署
+2. 从 master 创建特性分支
+3. 经常提交和推送
+4. 通过 Pull Request 请求合并
+5. 合并后立即部署
+
+### 工作流程
+
+1. 从 master 创建分支
+2. 添加提交
+3. 开启 Pull Request
+4. 讨论和评审
+5. 部署和测试
+6. 合并和部署
+
+## Trunk Based Development
+
+### 概述
+
+主干开发模式，适合持续集成/持续部署（CI/CD）的团队。
+
+### 特点
+
+- 所有开发者直接在主干上工作
+- 使用功能开关控制新功能
+- 小规模、频繁的提交
+- 自动化测试保障
+
+### 最佳实践
+
+1. 保持提交小而频繁
+2. 使用功能开关
+3. 自动化测试覆盖
+4. 快速修复主干问题
+
+## 选择合适的工作流
+
+### 考虑因素
+
+- 团队规模
+- 项目类型
+- 发布频率
+- 团队经验
+
+### 建议
+
+- 小团队：GitHub Flow
+- 大型项目：Git Flow
+- CI/CD 环境：Trunk Based Development
+
+## 工作流工具
+
+### GUI 工具
+
+- Sourcetree
+- GitKraken
+- GitHub Desktop
+
+### 命令行工具
+
+- git-flow
+- hub
+- gh
+
+## 最佳实践
+
+1. **分支命名规范**
+
+   - feature/功能名
+   - bugfix/问题描述
+   - hotfix/修复描述
+
+2. **提交信息规范**
+
+   - feat: 新功能
+   - fix: 修复问题
+   - docs: 文档更新
+   - style: 代码格式
+   - refactor: 重构
+   - test: 测试相关
+   - chore: 构建过程或辅助工具的变动
+
+3. **Code Review**
+
+   - 提交前自查
+   - 同行评审
+   - 自动化检查
+
+4. **持续集成**
+   - 自动化测试
+   - 代码质量检查
+   - 自动化部署
+
+## 常见问题
+
+### 合并冲突处理
+
+1. 保持分支同步
+2. 小步提交
+3. 及时解决冲突
+
+### 版本管理
+
+1. 语义化版本号
+2. 更新日志维护
+3. 版本标签管理
+
+## 总结
+
+选择合适的工作流对项目的成功至关重要。根据团队特点和项目需求，选择或调整适合的工作流程，并持续优化改进。

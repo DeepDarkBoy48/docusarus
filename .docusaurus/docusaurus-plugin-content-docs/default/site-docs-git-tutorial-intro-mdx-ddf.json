@@ -1,0 +1,27 @@
+{
+  "id": "git-tutorial/intro",
+  "title": "Git 教程",
+  "description": "欢迎来到 Git 教程！在这里，你将学习到 Git 的核心概念和实践技巧。",
+  "source": "@site/docs/git-tutorial/intro.mdx",
+  "sourceDirName": "git-tutorial",
+  "slug": "/git-tutorial/intro",
+  "permalink": "/docs/git-tutorial/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/git-tutorial/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Translate your site",
+    "permalink": "/docs/tutorial-extras/translate-your-site"
+  },
+  "next": {
+    "title": "Git 工作流",
+    "permalink": "/docs/git-tutorial/workflow"
+  }
+}

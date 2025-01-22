@@ -1,0 +1,7 @@
+{
+  "type": "mdx",
+  "permalink": "/git-tutorial",
+  "source": "@site/src/pages/git-tutorial.md",
+  "frontMatter": {},
+  "unlisted": false
+}

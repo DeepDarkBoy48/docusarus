@@ -11,6 +11,16 @@
           "mainDocId": "intro",
           "docs": [
             {
+              "id": "git-tutorial/intro",
+              "path": "/docs/git-tutorial/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "git-tutorial/workflow",
+              "path": "/docs/git-tutorial/workflow",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "intro",
               "path": "/docs/intro",
               "sidebar": "tutorialSidebar"
